@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Card Flip Example</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    * { box-sizing: border-box; }
+    body { font-family: 'Roboto'}
+    body { font-family: 'Roboto', sans-serif; margin:  0; padding: 0; height: 100vh;}
+    
+    #body{
+        background-color: black;
+    }
+    #container {
+  background-image: url("C:\Users\bnsku\Downloads\photo-1582266255765-fa5cf1a1d501.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.game-board {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  z-index: 0; /* This will ensure that the background image is behind all the cards */
+}
+
+.card {
+  z-index: 1;
+}
+
+.card-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; /* Adjust this value according to your layout */
+}
+
+.card {
+  background-color: #EF1897;
+  width: 23%; /* Adjust card width */
+  height: 250px; /* Adjust card height */
+  margin: 10px;
+  position: relative;
+  perspective: 1000px;
+}
+    
+    .card .front, .card .back {
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.6s;
+    }
+    
+    .card .back {
+      transform: rotateY(180deg);
+    }
+    
+    .card.flipped .front {
+      transform: rotateY(-180deg);
+    }
+    
+    .card.flipped .back {
+      transform: rotateY(0deg);
+    }
+    
+    #click-count {
+  position: fixed;
+  bottom: 20px; /* Adjust vertical position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #8C52FF; /* Semi-transparent background */
+  color: #fff;
+  padding: 10px 20px; /* Increase padding for better visibility */
+  border-radius: 10px;
+  font-size: 18px; /* Increase font size for better visibility */
+  z-index: 100; /* Ensure it's above other content */
+}
+    </style>    
+</head>
+<body class="game-board">
+  console.log("JAMUN KHAO CARD DABAO");
+  <div id="container">
+    <div class="card" id="card1">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">
+        <h2>thoda sharam karo bhgwaan se daro</h2>
+        
+      </div>
+    </div>
+    <div class="card" id="card2">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">
+        
+        <p>Chole Bature</p>
+      </div>
+    </div>
+    <div class="card" id="card3">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">
+        <h2>Phir bolte hai job nahi lagti.</h2>
+        <p></p>
+      </div>
+    </div>
+    <div class="card" id="card4">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">  
+        <h2>Thala for a Reason</h2>
+      </div>
+    </div>
+    <div class="card" id="card5">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">
+        <h2>NA Maane.</h2>
+        
+      </div>
+    </div>
+    <div class="card" id="card6">
+      <div class="front">
+        <h2>Click me</h2>
+      </div>
+      <div class="back">
+        <p></p>
+      </div>
+    </div>
+    <div class="card" id="card7">
+      <div class="front">
+        <h2>Click me</h2>
+    </div>
+    <div class="back">
+
+      <p>Ulti ginti shuru</p>
+    </div>
+  </div>
+  <div class="card" id="card8">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+
+      <p>Kyo bhai aa gye sawad.</p>
+    </div>
+  </div>
+  <div class="card" id="card9">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+    
+    </div>
+  </div>
+  <div class="card" id="card10">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      
+    </div>
+  </div>
+  <div class="card" id="card11">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      <h2></h2>
+    </div>
+  </div>
+  <div class="card" id="card12">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      <h2>(97%6)*7-(286%2)+(70%8)-6</h2>
+    </div>
+  </div>
+  <div class="card" id="card13">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      <h2>Nahi ho raha kya</h2>
+    </div>
+  </div>
+  <div class="card" id="card14">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+     
+      <p>Within the vast digital realm, where websites abide,
+        A hidden gem awaits, within our college's online guide.
+        Not just any date, but one we need to decide,
+        The day our website first began its online ride.
+        <br><br>
+        Explore the web's depths, where clues coincide,
+        Discover the date when our site was applied.
+        Unravel this detail, and our path will be eyed,
+        To escape this challenge, your skills must be applied.</p>
+    </div>
+  </div>
+  <div class="card" id="card15">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      <h2>Thala For a reason</h2>
+    </div>
+  </div>
+  <div class="card" id="card16">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+    </div>
+  </div>
+  <div class="card" id="card17">
+    <div class="front">
+      <h2>Click me</h2>
+    </div>
+    <div class="back">
+      <h2>Random.exe</h2>
+    </div>
+  </div>
+    <div class="card" id="card18">
+        <div class="front">
+          <h2>Click me</h2>
+        </div>
+        <div class="back">
+         
+          <h2></h2>
+        </div>
+      </div>
+      <div class="card" id="card19">
+        <div class="front">
+          <h2>Click me</h2>
+        </div>
+        <div class="back">
+          <h2>Answer lies on the left side</h2>
+        </div>
+      </div>
+      <div class="card" id="card20">
+        <div class="front">
+          <h2>Click me</div>
+        </div>
+        <div class="back">
+          <h2>Chalo niklo.</h2>
+        </div>
+      </div>
+    <div id="click-count">Clicks: 10</div>
+
+    
+    
+  
+    <script>
+        const correctPassword = "your_password_here"; // Change this to your desired password
+
+// Function to check password
+function checkPassword() {
+  const userInput = document.getElementById("password").value;
+  if (userInput === correctPassword) {
+    document.getElementById("password-form").style.display = "none";
+    location.reload();
+  } else {
+    alert("Incorrect password. Reloading the page is not allowed.");
+  }
+}
+
+// Show password form when attempting to reload the page
+window.addEventListener("beforeunload", function(event) {
+  event.preventDefault();
+  document.getElementById("password-form").style.display = "block";
+  event.returnValue = ""; // Cancel the reload
+});
+        // Initialize click counter
+        let clickCount = 10;
+      
+        // Add click event listeners to each card
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+          card.addEventListener('click', () => {
+            // Check if click count is less than 10
+            if (clickCount > 0) {
+              // Remove the flipped class from all cards
+              cards.forEach(c => c.classList.remove('flipped'));
+      
+              // Toggle the flipped class on the clicked card
+              card.classList.toggle('flipped');
+      
+              // Increment click counter
+              clickCount--;
+      
+              // Display click counter
+              document.getElementById('click-count').textContent = `Clicks: ${clickCount}`;
+            } else {
+              // Disable further clicks
+              cards.forEach(c => c.removeEventListener('click', clickHandler));
+            }
+          });
+        });
+      </script>
+  </body>
+  </html>
